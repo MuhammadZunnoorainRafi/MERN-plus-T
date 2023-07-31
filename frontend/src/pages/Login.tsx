@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from '../hooks/rtkHooks';
 import { login } from '../features/authSlice';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 function Login() {
   type formType = {
@@ -60,6 +61,9 @@ function Login() {
 
   return (
     <div>
+      <Helmet>
+        <title>Login - Blogverse</title>
+      </Helmet>
       <Link
         className="btn btn-sm btn-neutral left-6 top-24 bg-black text-white absolute "
         to="/"

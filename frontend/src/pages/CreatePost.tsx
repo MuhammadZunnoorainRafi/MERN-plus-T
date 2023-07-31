@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import { type Error, errorHandler } from '../utils/errorHandler';
 import { blogDataT } from '../hooks/BlogQueryTypes';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export type typeCreatePost = {
   title: string;
@@ -99,6 +100,9 @@ function CreatePost() {
 
   return (
     <div className="max-w-4xl mx-auto p-2">
+      <Helmet>
+        <title>Create Blog - Blogverse</title>
+      </Helmet>
       <h1 className="text-2xl font-bold mb-3">Create Post</h1>
       <form
         onSubmit={handleSubmit(formSubmit)}

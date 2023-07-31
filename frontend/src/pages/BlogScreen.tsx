@@ -6,6 +6,7 @@ import { type Error, errorHandler } from '../utils/errorHandler';
 import { toast } from 'react-toastify';
 import Loading from '../utils/Loading';
 import BlogScreenCard from '../utils/BlogScreenCard';
+import { Helmet } from 'react-helmet-async';
 
 function BlogScreen() {
   const dispatch = useAppDispatch();
@@ -28,6 +29,9 @@ function BlogScreen() {
   }
   return (
     <div>
+      <Helmet>
+        <title>Blogs - Blogverse</title>
+      </Helmet>
       <h1 className="font-bold text-3xl">All Blogs:</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto mt-5 place-content-center place-items-center ">
         {blogs.map((val) => {

@@ -21,7 +21,7 @@ function Navbar({ darkTheme, setDarkTheme }: themeType) {
   const [showMenu, setShowMenu] = useState(false);
   const NavItem = [
     { id: 'home', href: '/', title: 'Home' },
-    { id: 'blog', href: '/blogs', title: 'Blog' },
+    { id: 'blog', href: '/blogs', title: 'Blogs' },
     { id: 'about', href: '/about', title: 'About' },
   ];
 

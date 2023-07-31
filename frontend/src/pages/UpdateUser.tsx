@@ -5,12 +5,16 @@ import moment from 'moment';
 import { Suspense } from 'react';
 import LinkProfileBlogs from './LinkProfileBlogs';
 import Loading from '../utils/Loading';
+import { Helmet } from 'react-helmet-async';
 
 function UpdateUser() {
   const { user } = useAppSelector((state) => state.auth);
 
   return (
     <div>
+      <Helmet>
+        <title>Profile - Blogverse</title>
+      </Helmet>
       <div className="max-w-2xl mx-auto mt-6 ">
         <h1 className="font-bold text-center  text-3xl tracking-wider mb-4">
           User Profile

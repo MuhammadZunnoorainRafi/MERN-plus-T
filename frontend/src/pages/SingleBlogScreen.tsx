@@ -20,6 +20,7 @@ import {
 } from '../hooks/commentsReactQueryHook';
 import { getComments } from '../features/commentSlice';
 import UpdateCommentModal from '../assets/UpdateCommentModal';
+import { Helmet } from 'react-helmet-async';
 
 function SingleBlogScreen() {
   const schemaComment = z.object({
@@ -123,6 +124,9 @@ function SingleBlogScreen() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-3">
+      <Helmet>
+        <title>{`${blog?.title}`} - Blogverse</title>
+      </Helmet>
       <div className="md:flex md:flex-row flex-col items-center justify-between gap-4">
         <h1 className="font-bold w-2/5 text-2xl md:text-4xl">{blog?.title}</h1>
         {blog?.user._id === user?._id && (

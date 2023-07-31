@@ -10,6 +10,7 @@ import axios from 'axios';
 import { type Error, errorHandler } from '../utils/errorHandler';
 import { useEffect, useState } from 'react';
 import ButtonLoading from '../utils/ButtonLoading';
+import { Helmet } from 'react-helmet-async';
 
 function Register() {
   type formType = {
@@ -114,6 +115,9 @@ function Register() {
   };
   return (
     <div className="max-w-lg mx-auto ">
+      <Helmet>
+        <title>Register - Blogverse</title>
+      </Helmet>
       <h1 className="font-bold text-2xl md:text-3xl text-center mb-3">
         Register to Blogverse
       </h1>

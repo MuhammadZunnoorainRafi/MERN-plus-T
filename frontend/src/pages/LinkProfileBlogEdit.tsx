@@ -14,6 +14,7 @@ import { useParams } from 'react-router-dom';
 import { useAppDispatch } from '../hooks/rtkHooks';
 import { getSinglePost } from '../features/blogSlice';
 import Loading from '../utils/Loading';
+import { Helmet } from 'react-helmet-async';
 export type typeCreatePost = {
   title: string;
   summary: string;
@@ -128,6 +129,9 @@ function LinkProfileBlogEdit() {
 
   return (
     <div className="max-w-4xl mx-auto p-2">
+       <Helmet>
+        <title>Edit Blog - Blogverse</title>
+      </Helmet>
       <h1 className="text-2xl font-bold mb-3">Edit Post</h1>
       <form
         onSubmit={handleSubmit(formSubmit)}

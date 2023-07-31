@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const stack = [
@@ -62,6 +63,9 @@ const stack = [
 function About() {
   return (
     <div className="max-w-5xl mx-auto">
+      <Helmet>
+        <title>About - Blogverse</title>
+      </Helmet>
       <h1 className="font-bold text-4xl my-3 text-center">About</h1>
       <h1 className="font-bold text-3xl mb-2">About me:</h1>
       <div className="max-w-4xl mx-auto">
