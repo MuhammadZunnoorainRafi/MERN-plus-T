@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "concurrently \"npm run server --prefix backend \" \"npm run dev --prefix frontend\" ",
     "build": "cd backend && npm --force install  && npm run build  && cd ../frontend && npm install && npm run build",
-    "start": "node backend/build/src/index.js",
+    "start": "nodemon backend/build/src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
