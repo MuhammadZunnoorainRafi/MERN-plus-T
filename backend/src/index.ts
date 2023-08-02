@@ -45,7 +45,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../../frontend/dist')));
 
   app.get('*', (req: Request, res: Response) =>
-    res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'))
+    res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'))
   );
 } else {
   app.get('/', (req, res) => {
@@ -54,11 +54,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.use(errorMiddleware);
-// app.listen(PORT, () =>
-//   console.log(`Server is running on PORT: http://localhost:${PORT}`)
-// );
-connectDB().then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server is running on PORT: http://localhost:${PORT}`);
-  });
-});
+app.listen(PORT, () =>
+  console.log(`Server is running on PORT: http://localhost:${PORT}`)
+);
