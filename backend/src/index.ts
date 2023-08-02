@@ -54,6 +54,11 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.use(errorMiddleware);
-app.listen(PORT, () =>
-  console.log(`Server is running on PORT: http://localhost:${PORT}`)
-);
+// app.listen(PORT, () =>
+//   console.log(`Server is running on PORT: http://localhost:${PORT}`)
+// );
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server is running on PORT: http://localhost:${PORT}`);
+  });
+});
