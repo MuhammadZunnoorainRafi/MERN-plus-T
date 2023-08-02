@@ -32,27 +32,34 @@ const stack = [
   },
   {
     id: 5,
+    title: 'Typescript',
+    description:
+      'TypeScript is JavaScript with syntax for types. TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.',
+    href: 'https://www.typescriptlang.org',
+  },
+  {
+    id: 6,
     title: 'Redux Toolkit',
     description:
       'Redux Toolkit is a set of tools that helps simplify Redux development. It includes utilities for creating and managing Redux stores, as well as for writing Redux actions and reducers. It is used for client side state management.',
     href: 'https://redux-toolkit.js.org',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Tanstack React Query',
     description:
       'TanStack Query (FKA React Query) is often described as the missing data-fetching library for web applications, but in more technical terms, it makes fetching, caching, synchronizing and updating server state in your web applications a breeze. It is used for server side state management',
     href: 'https://tanstack.com/query/latest',
   },
   {
-    id: 7,
+    id: 8,
     title: 'React Hook Form',
     description:
       'React Hook Form is a library that helps you validate forms in React. It is a minimal library without any other dependencies, while being performant and straightforward to use, requiring developers to write fewer lines of code than other form libraries.',
     href: 'https://react-hook-form.com',
   },
   {
-    id: 8,
+    id: 9,
     title: 'Tailwind CSS',
     description:
       'Tailwind CSS is an open source CSS framework. The main feature of this library is that, unlike other CSS frameworks like Bootstrap, it does not provide a series of predefined classes for elements such as buttons or tables.',
