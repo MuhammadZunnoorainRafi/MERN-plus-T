@@ -3,9 +3,10 @@ import UpdateUserModal from '../assets/UpdateUserModal';
 import DeleteUserModal from '../assets/DeleteUserModal';
 import moment from 'moment';
 import { Suspense } from 'react';
-import LinkProfileBlogs from './LinkProfileBlogs';
 import Loading from '../utils/Loading';
 import { Helmet } from 'react-helmet-async';
+import React from 'react';
+const LinkProfileBlogs = React.lazy(() => import('./LinkProfileBlogs'));
 
 function UpdateUser() {
   const { user } = useAppSelector((state) => state.auth);
