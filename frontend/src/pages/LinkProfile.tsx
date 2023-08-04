@@ -13,7 +13,7 @@ function LinkProfile() {
   const { data, isLoading, error } = useQuery({
     queryKey: ['linkProfile', params.id],
     queryFn: async () => {
-      const res = await axios.get(`api/get/profile/${params.id}`);
+      const res = await axios.get(`/api/get/profile/${params.id}`);
       return res.data;
     },
   });

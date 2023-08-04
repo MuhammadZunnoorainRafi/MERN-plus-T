@@ -129,7 +129,7 @@ function LinkProfileBlogEdit() {
 
   return (
     <div className="max-w-4xl mx-auto p-2">
-       <Helmet>
+      <Helmet>
         <title>Edit Blog - Blogverse</title>
       </Helmet>
       <h1 className="text-2xl font-bold mb-3">Edit Post</h1>
