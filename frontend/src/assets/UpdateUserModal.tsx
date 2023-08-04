@@ -167,6 +167,7 @@ function UpdateUserModal() {
                         className=" file-input file-input-primary file-input-bordered  bg-white text-slate-900 w-full "
                         {...register('image')}
                         type="file"
+                        accept="image/png, image/jpg, image/jpeg"
                         placeholder="Enter Your Image"
                       />
                       {errors.image && (

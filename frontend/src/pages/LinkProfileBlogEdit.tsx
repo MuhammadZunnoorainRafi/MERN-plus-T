@@ -171,7 +171,7 @@ function LinkProfileBlogEdit() {
             {...register('image')}
             type="file"
             placeholder="Enter Your Image"
-            accept=".png,.jpg,.jpeg"
+            accept="image/png, image/jpg, image/jpeg"
           />
           <p className="text-red-500 text-sm">{errors.image?.message}</p>
         </div>
