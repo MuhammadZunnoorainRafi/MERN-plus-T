@@ -131,7 +131,7 @@ function Register() {
             {...register('image')}
             type="file"
             placeholder="Enter Your Image"
-            accept=".png,.jpg,.jpeg"
+            accept="image/png, image/jpg, image/jpeg"
           />
           {errors.image && (
             <p className="text-red-500 text-sm py-1">{errors.image.message}</p>
